@@ -1,5 +1,5 @@
 {
-  "name": "Praxent-CRM",
+  "name": "@praxent/praxent-crm",
   "version": "1.0.0",
   "description": "CRM methods right now using Hubspot",
   "main": "index.js",
@@ -37,5 +37,19 @@
   },
   "dependencies": {
     "axios": "^0.19.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praxent/praxent-crm.git"
+  },
+  "keywords": [
+    "crm",
+    "hubspot"
+  ],
+  "author": "Jacob Bodkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praxent/praxent-crm/issues"
+  },
+  "homepage": "https://github.com/praxent/praxent-crm#readme"
 }
