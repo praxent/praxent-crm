@@ -20,7 +20,7 @@ async exampleFunction() => {
     const response = await hubspotIntegration({ action: 'createContact', data })
     return {
       success: true,
-      data: hubspotIntegration,
+      data: response,
     }
   } catch(error) {
     console.warn(error)
