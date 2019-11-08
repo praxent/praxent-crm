@@ -35,7 +35,7 @@ class HubspotIntegration {
 }
 
 const hubspotIntegration = new HubspotIntegration({
-  url: process.env.url,
+  url: 'https://api.hubapi.com'
 });
 
 module.exports = hubspotIntegration;
