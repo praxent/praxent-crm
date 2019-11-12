@@ -7,6 +7,7 @@ const searchContactByEmail = require('../methods/searchContactByEmail');
 class HubspotIntegration {
   constructor(props) {
     this.url = props.url;
+    this.apiKey = props.apiKey;
 
     this.createContact = createContact;
     this.createDeal = createDeal;
@@ -16,7 +17,7 @@ class HubspotIntegration {
   async execute({ method, path, data }) {
     const request = {
       method,
-      url: `${this.url}/${path}`,
+      url: `${this.url}/${path}?hapikey=${this.apiKey}`,
     };
 
     if (method === 'POST') {
@@ -30,14 +31,13 @@ class HubspotIntegration {
     return response;
   }
 
-  async run({ action, data }) {
+  async fetch({ action, data }) {
     const response = await this.execute(this[action](data));
     return response;
   }
 }
 
-const hubspotIntegration = new HubspotIntegration({
+module.exports = ({ apiKey }) => new HubspotIntegration({
   url: 'https://api.hubapi.com',
+  apiKey,
 });
-
-module.exports = hubspotIntegration;

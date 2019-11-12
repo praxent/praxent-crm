@@ -1,6 +1,6 @@
-const searchContactByEmail = ({ crmData, crmApiKey }) => ({
+const searchContactByEmail = (data) => ({
   method: 'GET',
-  path: `contacts/v1/contact/email/${crmData.email}/profile?hapikey=${crmApiKey}`,
+  path: `contacts/v1/contact/email/${data.email}/profile`,
 });
 
 module.exports = searchContactByEmail;

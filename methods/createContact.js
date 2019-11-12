@@ -1,7 +1,7 @@
-const createContact = ({ crmData, crmApiKey }) => ({
+const createContact = (data) => ({
   method: 'POST',
-  path: `contacts/v1/contact/?hapikey=${crmApiKey}`,
-  data: crmData,
+  path: `contacts/v1/contact/`,
+  data,
 });
 
 module.exports = createContact;
