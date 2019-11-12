@@ -10,7 +10,6 @@ Actions Types:
 
 `createContact`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/create_contact
-* data:
 ```
 {
   properties: [
@@ -25,7 +24,6 @@ Actions Types:
 
 `createDeal`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/deals/create_deal
-* data:
 ```
 {
   associations: {
@@ -43,7 +41,6 @@ Actions Types:
 
 `searchContactByEmail`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/get_contact_by_email
-* data: 
 ```
 {
   email: string,
