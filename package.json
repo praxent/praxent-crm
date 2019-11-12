@@ -1,6 +1,6 @@
 {
   "name": "@praxent/praxent-crm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CRM methods right now using Hubspot",
   "main": "index.js",
   "engines": {
