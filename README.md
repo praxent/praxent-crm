@@ -10,7 +10,9 @@ Actions Types:
 
 `createContact`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/create_contact
-* data: ```{
+* data:
+```
+{
   properties: [
     {
       property: string,
@@ -18,11 +20,14 @@ Actions Types:
     }
     ...
   ]
-}```
+}
+```
 
 `createDeal`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/deals/create_deal
-* data: ```{
+* data:
+```
+{
   associations: {
     associatedVids: [int],
   },
@@ -33,13 +38,17 @@ Actions Types:
     }
     ...
   ]
-}```
+}
+```
 
 `searchContactByEmail`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/get_contact_by_email
-* data: ```{
+* data: 
+```
+{
   email: string,
-}```
+}
+```
 
 You can use the package as follows:
 
