@@ -7,9 +7,10 @@ This package is to assist in the sending of information to your specified CRM. R
 ### HubSpot Integration
 
 Actions Types:
+
 `createContact`
-Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/create_contact
-data: ```{
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/create_contact
+* data: ```{
   properties: [
     {
       property: string,
@@ -20,8 +21,8 @@ data: ```{
 }```
 
 `createDeal`
-Hubspot Reference: https://developers.hubspot.com/docs/methods/deals/create_deal
-data: ```{
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/deals/create_deal
+* data: ```{
   associations: {
     associatedVids: [int],
   },
@@ -35,8 +36,8 @@ data: ```{
 }```
 
 `searchContactByEmail`
-Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/get_contact_by_email
-data: ```{
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/contacts/get_contact_by_email
+* data: ```{
   email: string,
 }```
 
