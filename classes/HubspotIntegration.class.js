@@ -2,6 +2,7 @@ const axios = require('axios');
 
 const createContact = require('../methods/createContact');
 const createDeal = require('../methods/createDeal');
+const searchContactByEmail = require('../methods/searchContactByEmail');
 
 class HubspotIntegration {
   constructor(props) {
@@ -9,23 +10,24 @@ class HubspotIntegration {
 
     this.createContact = createContact;
     this.createDeal = createDeal;
+    this.searchContactByEmail = searchContactByEmail;
   }
 
   async execute({ method, path, data }) {
-    try {
-      const response = await axios({
-        method,
-        url: `${this.url}${path}`,
-        data: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      return response;
-    } catch (error) {
-      console.error(error);
-      return error;
+    const request = {
+      method,
+      url: `${this.url}/${path}`,
+    };
+
+    if (method === 'POST') {
+      request.data = JSON.stringify(data);
+      request.headers = {
+        'Content-Type': 'application/json',
+      };
     }
+
+    const response = await axios(request);
+    return response;
   }
 
   async run({ action, data }) {
@@ -35,7 +37,7 @@ class HubspotIntegration {
 }
 
 const hubspotIntegration = new HubspotIntegration({
-  url: 'https://api.hubapi.com'
+  url: 'https://api.hubapi.com',
 });
 
 module.exports = hubspotIntegration;

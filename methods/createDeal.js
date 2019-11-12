@@ -1,6 +1,6 @@
 const createDeal = ({ crmData, crmApiKey }) => ({
   method: 'POST',
-  path: `deals/v1/deal?hapikey=${data.crmApiKey}`,
+  path: `deals/v1/deal?hapikey=${crmApiKey}`,
   data: crmData,
 });
 
