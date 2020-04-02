@@ -58,7 +58,7 @@ class HubspotIntegration {
   }
 }
 
-module.exports = ({ apiKey }) => new HubspotIntegration({
+module.exports = ({ apiKey, appId }) => new HubspotIntegration({
   url: 'https://api.hubapi.com',
   apiKey,
   appId,
