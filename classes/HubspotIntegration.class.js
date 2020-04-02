@@ -35,10 +35,10 @@ class HubspotIntegration {
     }
   }
 
-  async execute({ method, path, data, query: '' }) {
+  async execute({ method, path, data, query }) {
     const request = {
       method,
-      url: `${this.url}/${path}${query}`,
+      url: `${this.url}/${path}${query ? query : ''}`,
     };
 
     if (['POST', 'PUT'].includes(method)) {
