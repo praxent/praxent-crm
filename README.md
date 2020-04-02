@@ -6,6 +6,32 @@ This package is to assist in the sending of information to your specified CRM. R
 
 ### HubSpot Integration
 
+You can use the package as follows:
+
+```
+const HubspotIntegration = require('@praxent/praxent-crm')
+
+async exampleFunction() => {
+  try {
+    const hubspotIntegration = HubspotIntegration({ apiKey }) // appId required for webhooks
+
+    const response = await hubspotIntegration.fetch({ action: 'createContact', data })
+    return {
+      success: true,
+      data: response,
+    }
+  } catch(error) {
+    console.warn(error)
+    return {
+      success: false,
+      error,
+    }
+  }
+}
+```
+
+The data variable is whatever data you want to send to HubSpot formatted for your specific project.
+
 Actions Types:
 
 `createContact`
@@ -47,28 +73,52 @@ Actions Types:
 }
 ```
 
-You can use the package as follows:
-
+`webhooks.settings.view`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
-const HubspotIntegration = require('@praxent/praxent-crm')
+{}
+```
 
-async exampleFunction() => {
-  try {
-    const hubspotIntegration = HubspotIntegration({ apiKey })
+`webhooks.settings.update`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
+```
+{
+  webhookUrl: string, // requires https
+  maxConcurrentRequests: int, // greater than 5
+}
+```
 
-    const response = await hubspotIntegration.fetch({ action: 'createContact', data })
-    return {
-      success: true,
-      data: response,
-    }
-  } catch(error) {
-    console.warn(error)
-    return {
-      success: false,
-      error,
-    }
+`webhooks.subscriptions.create`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
+```
+{
+  subscriptionDetails: {
+    subscriptionType: string,
+    propertyName: string,
+  },
+  enabled: bool,
+}
+```
+
+`webhooks.subscriptions.get`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
+```
+{}
+```
+
+`webhooks.subscriptions.update`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
+```
+{
+  subscriptionId: int,
+  data: {
+    enabled: bool,
   }
 }
 ```
 
-The data variable is whatever data you want to send to HubSpot formatted for your specific project.
+`webhooks.subscriptions.delete`
+* Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
+```
+{}
+```

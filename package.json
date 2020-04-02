@@ -1,7 +1,7 @@
 {
   "name": "@praxent/praxent-crm",
-  "version": "1.0.2",
-  "description": "CRM methods right now using Hubspot",
+  "version": "1.0.3",
+  "description": "CRM methods using Hubspot",
   "main": "index.js",
   "engines": {
     "node": "10.x.x"
@@ -11,7 +11,8 @@
     "test": "echo \"need tests\""
   },
   "contributors": [
-    "jacob.bodkin@praxent.com"
+    "jacob.bodkin@praxent.com",
+    "ryan.ostrom@praxent.com"
   ],
   "devDependencies": {
     "@babel/cli": "7.4.4",
@@ -46,7 +47,7 @@
     "crm",
     "hubspot"
   ],
-  "author": "Jacob Bodkin",
+  "author": "Jacob Bodkin, Ryan Ostrom",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/praxent/praxent-crm/issues"
