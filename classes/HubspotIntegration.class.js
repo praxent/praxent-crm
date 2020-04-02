@@ -21,18 +21,12 @@ class HubspotIntegration {
     this.createDeal = createDeal;
     this.searchContactByEmail = searchContactByEmail;
 
-    this.webhooks = {
-      settings: {
-        view: viewSettings,
-        update: updateSettings,
-      },
-      subscriptions: {
-        create: createSubscription,
-        get: getSubscriptions,
-        update: updateSubscription,
-        delete: deleteSubscription,
-      }
-    }
+    this.viewSettings = viewSettings.bind(this);
+    this.updateSettings = updateSettings.bind(this);
+    this.createSubscription = createSubscription.bind(this);
+    this.getSubscriptions = getSubscriptions.bind(this);
+    this.updateSubscription = updateSubscription.bind(this);
+    this.deleteSubscription = deleteSubscription.bind(this);
   }
 
   async execute({ method, path, data, query }) {

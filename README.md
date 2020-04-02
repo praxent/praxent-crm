@@ -73,13 +73,13 @@ Actions Types:
 }
 ```
 
-`webhooks.settings.view`
+`viewSettings`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {}
 ```
 
-`webhooks.settings.update`
+`updateSettings`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {
@@ -88,7 +88,7 @@ Actions Types:
 }
 ```
 
-`webhooks.subscriptions.create`
+`createSubscriptions`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {
@@ -100,13 +100,13 @@ Actions Types:
 }
 ```
 
-`webhooks.subscriptions.get`
+`getSubscriptions`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {}
 ```
 
-`webhooks.subscriptions.update`
+`updateSubscriptions`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {
@@ -117,7 +117,7 @@ Actions Types:
 }
 ```
 
-`webhooks.subscriptions.delete`
+`deleteSubscriptions`
 * Hubspot Reference: https://developers.hubspot.com/docs/methods/webhooks/webhooks-overview
 ```
 {}
