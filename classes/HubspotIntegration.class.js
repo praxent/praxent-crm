@@ -3,6 +3,7 @@ const axios = require('axios');
 const createContact = require('../methods/createContact');
 const createDeal = require('../methods/createDeal');
 const searchContactByEmail = require('../methods/searchContactByEmail');
+const getAllDeals = require('../methods/getAllDeals');
 
 const viewSettings = require('../methods/webhooks/viewSettings');
 const updateSettings = require('../methods/webhooks/updateSettings');
@@ -20,6 +21,7 @@ class HubspotIntegration {
     this.createContact = createContact;
     this.createDeal = createDeal;
     this.searchContactByEmail = searchContactByEmail;
+    this.getAllDeals = getAllDeals;
 
     this.viewSettings = viewSettings.bind(this);
     this.updateSettings = updateSettings.bind(this);
